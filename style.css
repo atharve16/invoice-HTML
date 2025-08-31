@@ -1,0 +1,526 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  padding: 20px;
+  color: #000;
+}
+
+.invoice-container {
+  text-align: center;
+  max-width: 210mm;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.print-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #2b4c85;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  z-index: 1000;
+}
+
+.print-btn:hover {
+  background: #365a96;
+}
+
+.header {
+  background: #ffffff;
+  color: #2b4c85;
+  padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.company-info {
+  flex: 1;
+}
+
+.company-name {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+  color: #2b4c85;
+}
+
+.company-details {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #6b7280;
+  font-weight: 400;
+}
+
+.mec {
+  background: #2b4c85;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 5px;
+  max-width: 21mm;
+}
+
+.tax-invoice-box {
+  background: #2b4c85;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.invoice-info-row {
+  display: flex;
+  background: #f8fafc;
+  padding: 20px 30px;
+  font-size: 13px;
+  gap: 40px;
+}
+
+.invoice-info-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.invoice-info-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: left;
+}
+
+.info-label {
+  font-weight: 500;
+  color: #374151;
+  font-size: 13px;
+  min-width: 120px;
+}
+
+.info-value {
+  color: #111827;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.billing-section {
+  display: flex;
+  padding: 20px 30px;
+  gap: 24px;
+  background: white;
+}
+
+.billing-box {
+  flex: 1;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.billing-title {
+  background: #f3f4f6;
+  color: #2b4c85;
+  padding: 10px 16px;
+  font-weight: 600;
+  font-size: 13px;
+  border-bottom: 1px solid #d1d5db;
+}
+
+.billing-content {
+  padding: 16px;
+  font-size: 12px;
+  line-height: 1.6;
+  background: white;
+  min-height: 100px;
+}
+
+.company-name-billing {
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.items-section {
+  margin: 0 30px 20px;
+}
+
+.items-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.items-table th {
+  background: #2b4c85;
+  color: white;
+  padding: 12px 8px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 11px;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.items-table th:last-child {
+  border-right: none;
+}
+
+.items-table td {
+  padding: 12px 8px;
+  border-right: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: center;
+  background: white;
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+.items-table td:last-child {
+  border-right: none;
+}
+
+.items-table .desc-col {
+  text-align: left;
+  width: 35%;
+  padding-left: 12px;
+  font-weight: 500;
+}
+
+.items-table .size-col {
+  width: 12%;
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.items-table .hsn-col {
+  width: 8%;
+}
+
+.items-table .qty-col {
+  width: 8%;
+  font-weight: 600;
+}
+
+.items-table .unit-col {
+  width: 8%;
+  color: #6b7280;
+}
+
+.items-table .price-col {
+  width: 12%;
+  text-align: right;
+  padding-right: 12px;
+  font-weight: 500;
+}
+
+.items-table .amount-col {
+  width: 13%;
+  text-align: right;
+  padding-right: 12px;
+  font-weight: 600;
+}
+
+.total-row {
+  background: #f8fafc !important;
+  font-weight: 700 !important;
+}
+
+.total-row td {
+  font-weight: 700 !important;
+  font-size: 12px !important;
+  color: #111827 !important;
+}
+
+.summary-section {
+  display: flex;
+  margin: 20px 30px;
+  gap: 24px;
+}
+
+.summary-left {
+  flex: 1;
+}
+
+.summary-right {
+  flex: 1;
+}
+
+.summary-box {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.summary-header {
+  background: #2b4c85;
+  color: white;
+  padding: 10px 16px;
+  font-weight: 600;
+  font-size: 13px;
+  text-align: center;
+}
+
+.summary-content {
+  padding: 16px;
+  font-size: 12px;
+  background: white;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  align-items: center;
+  font-weight: 500;
+}
+
+.summary-row:last-child {
+  margin-bottom: 0;
+}
+
+.summary-content hr {
+  margin: 12px 0;
+  border: none;
+  border-top: 1px solid #d1d5db;
+}
+
+.tax-summary-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1.5fr;
+  gap: 10px;
+  text-align: center;
+  font-size: 11px;
+}
+
+.tax-summary-header-row {
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 1px solid #d1d5db;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+}
+
+.tax-summary-data-row {
+  color: #111827;
+  font-weight: 500;
+}
+
+.grand-total {
+  background: #2b4c85;
+  color: white;
+  padding: 12px 20px;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 12px;
+  border-radius: 6px;
+}
+
+.amount-words {
+  text-align: center;
+  font-size: 13px;
+  color: #374151;
+  margin: 16px 30px;
+  padding: 12px;
+  background: #f8fafc;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+.bottom-section {
+  display: flex;
+  margin: 20px 30px;
+  gap: 30px;
+}
+
+.bank-details {
+  flex: 2;
+}
+
+.bank-details h4 {
+  color: #2b4c85;
+  font-size: 13px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.bank-details-content {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #374151;
+}
+
+.bank-details-content strong {
+  color: #111827;
+  font-weight: 600;
+}
+
+.qr-section {
+  flex: 1;
+  text-align: center;
+}
+
+.qr-code {
+  width: 90px;
+  height: 90px;
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  color: #000;
+  margin: 0 auto 10px;
+  position: relative;
+}
+
+.qr-pattern {
+  width: 70px;
+  height: 70px;
+  background: repeating-linear-gradient(
+      0deg,
+      #000 0px,
+      #000 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #000 0px,
+      #000 2px,
+      transparent 2px,
+      transparent 4px
+    );
+  border-radius: 2px;
+}
+
+.qr-label {
+  font-size: 11px;
+  color: #6b7280;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+.footer-section {
+  display: flex;
+  margin: 25px 30px 30px;
+  gap: 40px;
+  font-size: 11px;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 20px;
+}
+
+.terms {
+  flex: 2;
+}
+
+.terms h4 {
+  color: #2b4c85;
+  margin-bottom: 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.terms-content {
+  line-height: 1.6;
+  color: #374151;
+    text-align: left;
+
+}
+
+.terms-note {
+  margin-top: 15px;
+  font-size: 10px;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.company-signature {
+  margin-top: 25px;
+  text-align: center;
+  font-weight: 600;
+  color: #374151;
+  font-size: 12px;
+}
+
+.signature {
+  flex: 1;
+  text-align: center;
+}
+
+.signature h4 {
+  color: #2b4c85;
+  margin-bottom: 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.signature-area {
+  height: 60px;
+  border-bottom: 2px solid #d1d5db;
+  margin: 25px 0 10px 0;
+}
+
+.signature-label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 11px;
+}
+
+@media print {
+  body {
+    background: white;
+    padding: 0;
+  }
+
+  .invoice-container {
+    max-width: none;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .print-btn {
+    display: none !important;
+  }
+
+  @page {
+    size: A4;
+    margin: 15mm;
+  }
+}
