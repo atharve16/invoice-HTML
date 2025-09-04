@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tax Invoice - Mahakali Ethnic Collection</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="print.css" media="print">
+
   </head>
 
   <body>
@@ -15,12 +17,18 @@
         <div class="company-info">
           <div class="company-name">MAHAKALI ETHNIC COLLECTION</div>
           <div class="company-details">
-            Shop No. 24, sadhua via - 141203 • sadhuav@gmail.com<br />
-            GSTIN: 23AAXCF7253H1Z7
+            Shop No. 25, sadhua via, Indore, MP - 452001 • 758XXXX006 •
+            mahakaliethnic@gmail.com<br />
+            <span style="color: #4b4d54; font-weight: 600; font-size: 12px"
+              >GSTIN: 23AAXCF7253H1Z7</span
+            >
           </div>
         </div>
         <div>
-          <div class="mec">MEC</div>
+          <div class="mec">
+            <span class="big">M</span><span class="small">EC</span>
+          </div>
+
           <div class="tax-invoice-box">TAX INVOICE</div>
         </div>
       </div>
@@ -48,23 +56,26 @@
         </div>
       </div>
 
-      <div class="billing-section">
-        <div class="billing-box">
-          <div class="billing-title">Billed to</div>
-          <div class="billing-content">
-            <div class="company-name-billing">Fashion Republik</div>
-            12, New Market Road, Indore, Madhya<br />
-            Pradesh - 452001<br /><br />
-            GSTIN / UIN : 23AAXCF7253H1Z7
+      <div class="billing-strip">
+        <span class="vbar vbar-left" aria-hidden="true"></span>
+
+        <div class="party">
+          <div class="party-title">Billed to:</div>
+          <div class="party-name">Fashion Paradise</div>
+          <div class="party-addr">32, New Market, Bhopal, MP - 462001</div>
+          <div class="party-gst">
+            <span>GSTIN / UIN :</span> 23AABCF7621R1Z7
           </div>
         </div>
-        <div class="billing-box">
-          <div class="billing-title">Shipped to</div>
-          <div class="billing-content">
-            <div class="company-name-billing">Fashion Republik</div>
-            12, New Market Road, Indore, Madhya<br />
-            Pradesh - 452001<br /><br />
-            GSTIN / UIN : 23AAXCF7253H1Z7
+
+        <span class="vbar vbar-mid" aria-hidden="true"></span>
+
+        <div class="party">
+          <div class="party-title">Shipped to:</div>
+          <div class="party-name">Fashion Paradise</div>
+          <div class="party-addr">32, New Market, Bhopal, MP - 462001</div>
+          <div class="party-gst">
+            <span>GSTIN / UIN :</span> 23AABCF7621R1Z7
           </div>
         </div>
       </div>
@@ -74,76 +85,72 @@
           <thead>
             <tr>
               <th style="width: 4%">S.N.</th>
-              <th class="desc-col">DESCRIPTION OF GOODS</th>
-              <th class="size-col">SIZE</th>
-              <th class="hsn-col">HSN/SAC</th>
-              <th class="qty-col">QTY</th>
-              <th class="unit-col">UNIT</th>
-              <th class="price-col">PRICE</th>
-              <th class="amount-col">AMOUNT(₹)</th>
+              <th>DESCRIPTION OF GOODS</th>
+              <th>SIZE</th>
+              <th>HSN/SAC</th>
+              <th>QTY.</th>
+              <th>UNIT</th>
+              <th>PRICE</th>
+              <th>AMOUNT(₹)</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>1</td>
-              <td class="desc-col">
-                Chikankari Embroidered Salwar Suit (Pink)
-              </td>
+              <td>Chikankari Embroidered Salwar Suit (Pink)</td>
               <td>S, M, L, XL</td>
               <td>6204</td>
               <td>24.00</td>
               <td>PCS</td>
-              <td style="text-align: right">1869.00</td>
-              <td style="text-align: right">45576.00</td>
+              <td>1899.00</td>
+              <td>45576.00</td>
             </tr>
             <tr>
               <td>2</td>
-              <td class="desc-col">Zardoshi Style Gown Set (Blue)</td>
-              <td>S, M, L</td>
+              <td>Anarkali Style Cotton Suit (Blue)</td>
+              <td>M, L, XL</td>
               <td>6204</td>
               <td>12.00</td>
               <td>PCS</td>
-              <td style="text-align: right">2069.00</td>
-              <td style="text-align: right">24828.00</td>
+              <td>1499.00</td>
+              <td>17988.00</td>
             </tr>
             <tr>
               <td>3</td>
-              <td class="desc-col">Designer Palazzo Suit (Mint Green)</td>
+              <td>Designer Palazzo Suit (Mint Green)</td>
               <td>S, M, L</td>
               <td>6204</td>
               <td>18.00</td>
               <td>PCS</td>
-              <td style="text-align: right">2179.00</td>
-              <td style="text-align: right">39242.00</td>
+              <td>2199.00</td>
+              <td>39582.00</td>
             </tr>
             <tr>
               <td>4</td>
-              <td class="desc-col">Heavy Work Festive Suit (Maroon)</td>
+              <td>Heavy Work Patiala Suit (Maroon)</td>
               <td>M, L, XL</td>
               <td>6204</td>
               <td>6.00</td>
               <td>PCS</td>
-              <td style="text-align: right">2389.00</td>
-              <td style="text-align: right">14334.00</td>
+              <td>2399.00</td>
+              <td>14394.00</td>
             </tr>
             <tr>
               <td>5</td>
-              <td class="desc-col">Premium Cotton Long Wear Suit Set (Navy)</td>
-              <td>S, M, L, XL</td>
+              <td>Printed Cotton Daily Wear Suit (Yellow)</td>
+              <td>XS, S, M, L, XL</td>
               <td>6204</td>
-              <td>20.00</td>
+              <td>30.00</td>
               <td>PCS</td>
-              <td style="text-align: right">1485.00</td>
-              <td style="text-align: right">29700.00</td>
+              <td>999.00</td>
+              <td>29970.00</td>
             </tr>
             <tr class="total-row">
-              <td colspan="4" style="text-align: right; font-weight: bold">
-                Total
-              </td>
-              <td style="font-weight: bold">80.00</td>
-              <td style="font-weight: bold">PCS</td>
+              <td colspan="4" style="text-align: right">Total</td>
+              <td>90.00</td>
+              <td>PCS</td>
               <td></td>
-              <td style="text-align: right; font-weight: bold">153680.00</td>
+              <td>147510.00</td>
             </tr>
           </tbody>
         </table>
@@ -153,40 +160,55 @@
         <div class="summary-left">
           <div class="summary-box">
             <div class="summary-header">Invoice Summary</div>
-            <div class="summary-content">
+            <div style="padding: 20px 10px">
               <div class="summary-row">
-                <span>Less:</span>
-                <span>Discount @ 10 %</span>
-                <span>15368.00</span>
+                <span class="label">Less</span>
+                <span class="desc">:Discount</span>
+                <span class="at">@</span>
+                <span class="percent">10 %</span>
+                <span class="amount">14751.00</span>
               </div>
               <div class="summary-row">
-                <span>Add</span>
-                <span>SGST @ 6.00 %</span>
-                <span>8299.92</span>
+                <span class="label">Add</span>
+                <span class="desc">:SGST</span>
+                <span class="at">@</span>
+                <span class="percent">6.000 %</span>
+                <span class="amount">7965.54</span>
               </div>
               <div class="summary-row">
-                <span>Add</span>
-                <span>CGST @ 6.00 %</span>
-                <span>8299.92</span>
+                <span class="label">Add</span>
+                <span class="desc">:CGST</span>
+                <span class="at">@</span>
+                <span class="percent">6.000 %</span>
+                <span class="amount">7965.54</span>
               </div>
               <div class="summary-row">
-                <span></span>
-                <span>Rounded Off</span>
-                <span>0.16</span>
+                <span class="label">Less</span>
+                <span class="desc">:Rounded Off (-)</span>
+                <span class="at"></span>
+                <span class="percent"></span>
+                <span class="amount">0.08</span>
               </div>
               <hr />
-              <div class="grand-total">Grand Total ₹ 154912.00</div>
+              <div class="grand-total">
+                <span>Grand Total</span>
+                <span>₹ 148690.00</span>
+              </div>
             </div>
           </div>
           <div class="amount-words">
-            Rupees One Lakh Fifty Four Thousand Nine Hundred Twelve Only
+            Rupees One Lakh Forty Eight Thousand Six Hundred Ninety Only
           </div>
         </div>
+
         <div class="summary-right">
           <div class="summary-box">
             <div class="summary-header">Tax Summary</div>
             <div class="summary-content">
-              <div class="tax-summary-grid tax-summary-header-row">
+              <div
+                class="tax-summary-grid tax-summary-header-row"
+                style="color: #2b4c85"
+              >
                 <span>Tax Rate</span>
                 <span>Taxable</span>
                 <span>CGST</span>
@@ -195,29 +217,29 @@
               </div>
               <div class="tax-summary-grid tax-summary-data-row">
                 <span>12%</span>
-                <span>138312.00</span>
-                <span>8299.92</span>
-                <span>8299.92</span>
-                <span>16599.84</span>
+                <span>132759.00</span>
+                <span>7965.54</span>
+                <span>7965.54</span>
+                <span>15931.08</span>
               </div>
             </div>
           </div>
-          <div class="bottom-section" style="text-align: left;">
+          <div class="bottom-section">
             <div class="bank-details">
               <h4>Bank Details</h4>
               <div class="bank-details-content">
-                <strong>Name:</strong> MAHAKALI ETHNIC COLLECTION<br />
-                <strong>A/c No:</strong> SBI9012345678<br />
-                <strong>Bank:</strong> State Bank of India<br />
-                <strong>Branch:</strong> M.G.Road, Indore<br />
-                <strong>IFSC:</strong> mahakali.ethnic@upi
+                <div><strong>Name:</strong> MAHAKALI ETHNIC COLLECTION</div>
+                <div><strong>A/C:</strong> 1234567890123456</div>
+                <div><strong>IFSC:</strong> SBIN0012345</div>
+                <div><strong>Bank:</strong> State Bank of India</div>
+                <div><strong>Branch:</strong> M.G. Road, Indore</div>
               </div>
             </div>
+
             <div class="qr-section">
-              <div class="qr-code">
-                <div class="qr-pattern"></div>
-              </div>
+              <img src="qr.png" alt="QR Code" class="qr-code" />
               <div class="qr-label">Scan to pay via UPI</div>
+              <div class="upi-id">mahakali.ethnic@upi</div>
             </div>
           </div>
         </div>
@@ -227,26 +249,32 @@
       <div class="footer-section">
         <div class="terms">
           <h4>Terms & Conditions:</h4>
-          <div class="terms-content">
-            1. E & O.E<br />
-            2. Goods once sold will not be taken back.<br />
-            3. Interest @ 18% p.a. will be charged if the payment is not made<br />
-            within the stipulated time.<br />
-            4. All disputes are subject to "Indore, Madhya Pradesh"
-            Jurisdiction<br />
-            only.<br />
-            5. Returns accepted only within 7 days of delivery with original<br />
-            packaging.
-          </div>
+          <ol class="terms-content">
+            <li>E & O.E.</li>
+            <li>Goods once sold will not be taken back.</li>
+            <li>
+              Interest @ 18% p.a. will be charged if the payment is not made
+              within the stipulated time.
+            </li>
+            <li>
+              All disputes are subject to 'Indore, Madhya Pradesh' Jurisdiction
+              only.
+            </li>
+            <li>
+              Returns accepted only within 7 days of delivery with original
+              packaging.
+            </li>
+          </ol>
         </div>
+
         <div class="signature">
           <h4>Receiver's Signature:</h4>
+          <div class="signature-area"></div>
           <div class="terms-note">
-            **We hereby confirm that we have reviewed the goods as per the
+            I/We hereby confirm that I/we have received the goods as per the
             invoice.
           </div>
           <div class="company-signature">For MAHAKALI ETHNIC COLLECTION</div>
-          <div class="signature-area"></div>
           <div class="signature-label">Authorised Signatory</div>
         </div>
       </div>
